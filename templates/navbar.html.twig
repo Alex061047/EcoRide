@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="{{ path('home') }}">
+    <img src="{{ asset('images/logo/logo-ecoride.png') }}" width="40" height="40" class="d-inline-block align-top" alt="Logo EcoRide">
+    EcoRide
+  </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex flex-row-reverse" id="mobileMenu">
+            <ul class="navbar-nav ml-auto mt-lg-0">
+                {% if app.user %}
+                <li class="nav-item">
+                    <span class="nav-link">Bienvenue {{ app.user.username }}!</span>
+                </li>
+                {% endif %}
+                <li class="nav-item {{ app.request.get('_route') == 'home' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ path('home') }}">Accueil</a>
+                </li>
+                <li class="nav-item {{ app.request.get('_route') == 'home' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ path('home') }}">Covoiturage</a>
+                </li>
+                {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('home') }}">Déconnexion</a>
+                </li>
+                {% else %}
+                <li class="nav-item {{ app.request.get('_route') == 'home' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ path('home') }}">Connexion</a>
+                </li>
+                <li class="nav-item {{ app.request.get('_route') == 'home' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ path('home') }}">Contact</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
