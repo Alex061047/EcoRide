@@ -1,6 +1,5 @@
 // Inclure Bootstrap 
-
-@import "bootstrap.css";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 
 //Definition des couleurs
@@ -8,7 +7,7 @@ $background: #CFA549;
 $primary: #A16D24;
 $secondary: #C5B585;
 $vert:#1C6F21;
-$beige: #E3D2AE;
+$beige: #E3D2AE; 
 $star: #F39A0A;
 
 // css
@@ -16,3 +15,4 @@ $star: #F39A0A;
 body {
   background-color: $background;
 }
+
