@@ -30,3 +30,12 @@
      justify-content: center;
      }
      } 
+
+     .form-control {
+          border-radius: 45px !important;
+      }
+     
+      input[type="date"] {
+          text-align: center; 
+          background-color: $beige; 
+      }

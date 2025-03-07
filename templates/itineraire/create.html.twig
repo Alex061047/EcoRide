@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un itinéraire{% endblock %}
+
+{% block body %}
+    <h1>Créer un itinéraire</h1>
+
+    {% if form is defined %}
+        {{ form_start(form) }}
+            {{ form_row(form.depart) }}
+            {{ form_row(form.arrive) }}
+            {{ form_row(form.jour) }}
+            <button type="submit">Enregistrer</button>
+        {{ form_end(form) }}
+    {% else %}
+        <p>Erreur : le formulaire n'est pas disponible.</p>
+    {% endif %}
+{% endblock %}
